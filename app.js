@@ -346,12 +346,70 @@ function flashAgent(headline, summary) {
 function setupVideo() {
   const video = $('#demoVideo');
   const playBtn = $('#videoPlayBtn');
+  const errorPanel = $('#videoError');
   if (!video) return;
-  video.addEventListener('loadedmetadata', resizeOverlay);
-  video.addEventListener('error', () => { $('#videoError').hidden = false; });
+
+  const candidates = getVideoAssetCandidates();
+  let candidateIndex = 0;
+  let hasLoaded = false;
+
+  const loadCandidate = (idx) => {
+    const src = candidates[idx];
+    if (!src) return;
+    video.dataset.sourceIndex = String(idx);
+    video.src = src;
+    video.load();
+  };
+
+  video.addEventListener('loadedmetadata', () => {
+    hasLoaded = true;
+    if (errorPanel) errorPanel.hidden = true;
+    resizeOverlay();
+  });
+
+  video.addEventListener('error', () => {
+    if (candidateIndex < candidates.length - 1) {
+      candidateIndex += 1;
+      loadCandidate(candidateIndex);
+      return;
+    }
+    if (errorPanel) {
+      errorPanel.hidden = false;
+      const detail = errorPanel.querySelector('span');
+      if (detail) detail.textContent = `Tried ${candidates.length} video path${candidates.length === 1 ? '' : 's'} including ${candidates[0]}.`;
+    }
+  });
+
   playBtn.onclick = () => video.play().then(() => playBtn.hidden = true).catch(() => {});
-  video.play().catch(() => playBtn.hidden = false);
+  loadCandidate(candidateIndex);
+  video.play().catch(() => {
+    if (!hasLoaded) return;
+    playBtn.hidden = false;
+  });
   startOverlayAnimation();
+}
+
+function getVideoAssetCandidates() {
+  const assetPath = state.data?.meta?.videoAsset || 'assets/mesabi_pit_to_pellet_feed.mp4';
+  const normalizedPath = assetPath.replace(/^\.\//, '');
+  const candidates = [
+    new URL(normalizedPath, document.baseURI).href,
+    new URL(`./${normalizedPath}`, window.location.href).href
+  ];
+
+  const githubRawUrl = getGitHubRawAssetUrl(normalizedPath);
+  if (githubRawUrl) candidates.push(githubRawUrl);
+
+  return [...new Set(candidates)];
+}
+
+function getGitHubRawAssetUrl(assetPath) {
+  const { hostname, pathname } = window.location;
+  if (!hostname.endsWith('.github.io')) return '';
+  const repo = pathname.split('/').filter(Boolean)[0];
+  if (!repo) return '';
+  const owner = hostname.replace(/\.github\.io$/, '');
+  return `https://raw.githubusercontent.com/${owner}/${repo}/main/${assetPath}`;
 }
 
 function resizeOverlay() {
