@@ -1,0 +1,14 @@
+{
+  "name": "mesabi-aionos-agentic-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static AIonOS Agentic AI pit-to-pellet operating brain demo tailored for Mesabi Metallics.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "preview": "vite --host 0.0.0.0",
+    "check": "node --check app.js"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

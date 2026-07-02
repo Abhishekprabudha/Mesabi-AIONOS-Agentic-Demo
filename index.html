@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mesabi AI-native Pit-to-Pellet Operating Brain | AIonOS Demo</title>
+  <meta name="description" content="Static GitHub Pages demo tailored for Mesabi Metallics: AIonOS Agentic AI operating brain for construction readiness, geology, processing, pellet quality, reliability, ESG and executive war-room governance." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">AI</div>
+        <div>
+          <div class="brand-title">AIonOS</div>
+          <div class="brand-subtitle">Mesabi operating brain</div>
+        </div>
+      </div>
+      <nav class="side-nav" aria-label="Demo navigation">
+        <button data-target="overview" class="nav-link active">Mission Control</button>
+        <button data-target="chain" class="nav-link">Pit-to-Pellet Chain</button>
+        <button data-target="video" class="nav-link">Video Twin</button>
+        <button data-target="readiness" class="nav-link">Readiness Tower</button>
+        <button data-target="quality" class="nav-link">Pellet Quality</button>
+        <button data-target="geology" class="nav-link">Geology AI</button>
+        <button data-target="reliability" class="nav-link">Reliability + ESG</button>
+        <button data-target="roadmap" class="nav-link">90-Day PoV</button>
+        <button data-target="copilot" class="nav-link">Mesabi Copilot</button>
+        <button data-target="evidence" class="nav-link">Evidence Vault</button>
+      </nav>
+      <div class="side-card">
+        <span class="mini-label">Demo mode</span>
+        <strong>Static GitHub Pages / Vite</strong>
+        <p>All agents, scenarios, KPIs, readiness packs, recommendations and audit records run from local JSON. No backend required.</p>
+      </div>
+      <div class="side-card compact">
+        <span class="mini-label">Narrative</span>
+        <strong>Start faster. Ramp safer. Run every ton with intelligence.</strong>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Mesabi Metallics · AI-native pit-to-pellet launch</p>
+          <h1>Agentic AI operating brain for construction-to-operations handoff</h1>
+          <p class="subhead">A working demo aligned to Mesabi’s requested phased roadmap: low-data readiness agents first, then geology, pellet quality, reliability, ESG and war-room simulation as operational data matures.</p>
+        </div>
+        <div class="top-actions">
+          <button id="startScenarioBtn" class="primary-btn">Start Mesabi scenario</button>
+          <button id="resetScenarioBtn" class="ghost-btn">Reset</button>
+          <button id="exportJsonBtn" class="ghost-btn">Export evidence JSON</button>
+          <label class="ghost-btn file-label">Import JSON<input id="importJsonInput" type="file" accept="application/json" /></label>
+        </div>
+      </header>
+
+      <section class="hero-grid" id="overview">
+        <div class="hero-card span-2">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Agentic operating loop</p>
+              <h2>Detect → Diagnose → Simulate → Recommend → Approve → Learn</h2>
+            </div>
+            <span class="live-pill"><span></span> Live synthetic scenario</span>
+          </div>
+          <div class="scenario-steps" id="scenarioSteps"></div>
+        </div>
+        <div class="agent-card">
+          <p class="eyebrow">Pit-to-Pellet Supervisor Agent</p>
+          <h3 id="agentHeadline">Awaiting Mesabi signal</h3>
+          <p id="agentSummary">Press “Start Mesabi scenario” to trigger video-twin monitoring, readiness checks, pellet quality simulation, reliability recommendations and evidence generation.</p>
+          <div class="agent-meter"><div id="agentMeterFill"></div></div>
+          <div class="agent-tags" id="agentTags"></div>
+        </div>
+      </section>
+
+      <section class="kpi-grid" id="kpiGrid"></section>
+
+      <section class="content-grid">
+        <div class="panel span-3" id="chain">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Pit-to-pellet operating brain</p>
+              <h2>One human-governed agent layer across geology, construction, process and executive control</h2>
+            </div>
+            <span class="muted small">Synthetic demo data · Mesabi-ready narrative</span>
+          </div>
+          <div class="chain-grid" id="chainGrid"></div>
+        </div>
+
+        <div class="panel span-2" id="video">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Video twin</p>
+              <h2>Mine movement video with AI overlays and event narration</h2>
+            </div>
+            <div class="status-chip" id="videoStatus">Monitoring</div>
+          </div>
+          <div class="video-wrap">
+            <video id="demoVideo" muted loop playsinline controls autoplay preload="metadata">
+              <source src="assets/mesabi_pit_to_pellet_feed.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+            <canvas id="visionOverlay" aria-label="AI overlay canvas"></canvas>
+            <div class="video-hud top-left"><strong>Camera MES-VT-04</strong><br />Pit / haulage / stockpile movement zone</div>
+            <div class="video-hud bottom-right" id="videoHud">Tracking haul route, stockpile boundary, worker/equipment movement and dust plume proxy.</div>
+            <button id="videoPlayBtn" class="video-play-btn" type="button" hidden>Play mine feed</button>
+            <div id="videoError" class="video-error" role="alert" hidden>
+              <strong>Video feed unavailable</strong>
+              <span>The browser could not load the demo video.</span>
+            </div>
+          </div>
+          <div class="event-strip" id="eventStrip"></div>
+        </div>
+
+        <div class="panel" id="quality">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Predictive processing</p>
+              <h2>Pellet quality risk from ore blend, P80, moisture and silica drift</h2>
+            </div>
+            <span class="status-chip warn" id="riskStatus">Elevated</span>
+          </div>
+          <div class="risk-gauge">
+            <svg viewBox="0 0 220 126" aria-label="pellet quality risk gauge">
+              <path d="M24 110 A86 86 0 0 1 196 110" class="gauge-bg" />
+              <path id="riskArc" d="M24 110 A86 86 0 0 1 196 110" class="gauge-fill" />
+            </svg>
+            <div class="gauge-value"><span id="riskScore">0</span><small>% off-spec risk</small></div>
+          </div>
+          <canvas id="riskTrendChart" class="chart short"></canvas>
+          <div class="insight-list" id="riskInsights"></div>
+        </div>
+
+        <div class="panel span-2" id="readiness">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Operational readiness</p>
+              <h2>AI-generated readiness pack for construction-to-operations governance</h2>
+            </div>
+            <button id="createIncidentBtn" class="primary-btn small-btn">Generate readiness pack</button>
+          </div>
+          <div class="readiness-layout">
+            <div class="incident-card" id="incidentCard"></div>
+            <div>
+              <h3>Commissioning event timeline</h3>
+              <div class="timeline" id="incidentTimeline"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" id="geology">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Geology + exploration</p>
+              <h2>QAQC exceptions, resource confidence and drill program options</h2>
+            </div>
+          </div>
+          <div class="workbench" id="geologyWorkbench"></div>
+        </div>
+
+        <div class="panel" id="reliability">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Reliability + ESG sentinels</p>
+              <h2>Crusher, conveyor, haulage, carbon, water and dust risk queue</h2>
+            </div>
+          </div>
+          <div class="capa-list" id="capaList"></div>
+        </div>
+
+        <div class="panel span-3" id="roadmap">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">90-day Proof of Value</p>
+              <h2>From alignment to working agents and a repeatable Mesabi AI war-room</h2>
+            </div>
+          </div>
+          <div class="roadmap" id="roadmapGrid"></div>
+        </div>
+
+        <div class="panel span-3" id="governance">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Governed agent actions</p>
+              <h2>Every recommendation has an owner, value case, evidence artifact and approval route</h2>
+            </div>
+          </div>
+          <div class="table-wrap"><table id="governanceTable"></table></div>
+        </div>
+
+        <div class="panel span-2" id="copilot">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Mesabi Copilot</p>
+              <h2>Ask the operating brain about value, readiness, geology, processing and ESG</h2>
+            </div>
+          </div>
+          <div class="quick-prompts" id="quickPrompts"></div>
+          <div class="copilot-box">
+            <div class="chat-window" id="chatWindow"></div>
+            <form id="copilotForm" class="chat-form">
+              <input id="copilotInput" type="text" placeholder="Ask: which agents should Mesabi approve first?" autocomplete="off" />
+              <button class="primary-btn small-btn" type="submit">Ask</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="panel" id="evidence">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Generated deliverables</p>
+              <h2>Board-ready evidence, not just dashboards</h2>
+            </div>
+          </div>
+          <div class="doc-list" id="evidenceObjects"></div>
+        </div>
+
+        <div class="panel span-3">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Audit trail</p>
+              <h2>Human-in-the-loop controls and explainable decisions</h2>
+            </div>
+          </div>
+          <div class="evidence-grid">
+            <div><h3>Agent action log</h3><div class="doc-list" id="auditTrail"></div></div>
+            <div><h3>Approval controls</h3><div class="doc-list" id="approvalControls"></div></div>
+            <div><h3>Value tracking</h3><canvas id="impactChart" class="chart"></canvas></div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <span>AIonOS × Mesabi Metallics · Agentic AI operating brain demo</span>
+        <span>Synthetic reference implementation · No Mesabi operational data included</span>
+      </footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
