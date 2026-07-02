@@ -1,0 +1,785 @@
+{
+  "meta": {
+    "project": "Mesabi Metallics AI-native Pit-to-Pellet Operating Brain",
+    "poweredBy": "AIonOS",
+    "mode": "Static GitHub Pages / Vite demo",
+    "dataClassification": "Synthetic demo data only - no Mesabi operational data",
+    "generatedOn": "2026-07-02",
+    "videoAsset": "assets/mesabi_pit_to_pellet_feed.mp4",
+    "sourceNarrative": "Mesabi_AIonOS_Agentic_AI.pptx"
+  },
+  "scenario": {
+    "name": "Construction-to-operations handoff with agentic AI war-room",
+    "durationSeconds": 42,
+    "script": [
+      "Video twin detects a haulage and stockpile movement signal. The Supervisor Agent starts with low-data visual, schedule and checklist intelligence.",
+      "Readiness Control Tower correlates mechanical completion, training, spares, HSE and commissioning evidence. Leaders see subsystem handoff risk before first pellet.",
+      "Processing Agent simulates ore blend, P80, silica, Fe grade, moisture and pellet strength. It recommends operating windows with recovery and energy trade-offs.",
+      "Geology Agent validates drillhole QAQC and highlights low-confidence orebody zones. It produces drill program options and model confidence heat maps.",
+      "Reliability, fleet and ESG sentinels rank crusher, conveyor, haulage, water, dust and carbon risks. Each recommendation gets an owner and approval route.",
+      "Executive War-Room generates board-ready outputs. The demo ends with a PoV charter, evidence pack, action log and KPI-owned value case."
+    ],
+    "kpis": {
+      "readinessPct": 78,
+      "readinessRiskReductionPct": 31,
+      "offSpecRiskPct": 67,
+      "qualityLearningDaysSaved": 24,
+      "qaQcExceptions": 19,
+      "reliabilityLeadTimeHours": 38,
+      "esgEvidenceCompletenessPct": 86,
+      "warRoomArtifacts": 42
+    }
+  },
+  "chain": [
+    {
+      "name": "Construction readiness",
+      "focus": "Mechanical completion, handover, SOPs, training, spares, HSE",
+      "readiness": 76,
+      "risk": "Elevated",
+      "agent": "Readiness Control Tower",
+      "primaryAction": "Close 18 critical A-punch items before commissioning freeze.",
+      "kpis": [
+        [
+          "Ready",
+          76,
+          "%"
+        ],
+        [
+          "A-items",
+          18,
+          ""
+        ],
+        [
+          "Docs",
+          91,
+          "%"
+        ]
+      ]
+    },
+    {
+      "name": "Geology & exploration",
+      "focus": "Drillhole QAQC, resource confidence, wireframe/solid model assist",
+      "readiness": 71,
+      "risk": "Watch",
+      "agent": "Orebody Intelligence Agent",
+      "primaryAction": "Reconcile duplicate assay intervals and run cutoff sensitivity scenario.",
+      "kpis": [
+        [
+          "QAQC",
+          81,
+          "%"
+        ],
+        [
+          "Zones",
+          7,
+          ""
+        ],
+        [
+          "Scenarios",
+          12,
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "Mine + fleet",
+      "focus": "Pit readiness, haul routes, autonomous haulage integration and queue intelligence",
+      "readiness": 69,
+      "risk": "Watch",
+      "agent": "Fleet Queue Optimizer",
+      "primaryAction": "Simulate truck-shovel queue at north stockpile and staging bay.",
+      "kpis": [
+        [
+          "Queue",
+          14,
+          "m"
+        ],
+        [
+          "Util.",
+          72,
+          "%"
+        ],
+        [
+          "Routes",
+          5,
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "Beneficiation",
+      "focus": "Crushing, grinding, liberation, recovery and Fe/SiO\u2082 stability",
+      "readiness": 74,
+      "risk": "Elevated",
+      "agent": "Process Quality Agent",
+      "primaryAction": "Tune P80 and water addition window for high-silica ore blend.",
+      "kpis": [
+        [
+          "Recovery",
+          88,
+          "%"
+        ],
+        [
+          "P80",
+          52,
+          "\u00b5m"
+        ],
+        [
+          "SiO\u2082",
+          3.9,
+          "%"
+        ]
+      ]
+    },
+    {
+      "name": "Pellet plant",
+      "focus": "Moisture, green ball quality, induration, pellet strength and lot genealogy",
+      "readiness": 68,
+      "risk": "Elevated",
+      "agent": "Pellet Quality Predictor",
+      "primaryAction": "Run pellet strength sensitivity across moisture and binder setpoints.",
+      "kpis": [
+        [
+          "Strength",
+          92,
+          "%"
+        ],
+        [
+          "Moist.",
+          8.8,
+          "%"
+        ],
+        [
+          "Lots",
+          16,
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "ESG + shipping",
+      "focus": "Carbon, water, dust, rail shipment readiness and green-steel traceability",
+      "readiness": 82,
+      "risk": "Stable",
+      "agent": "ESG Evidence Spine",
+      "primaryAction": "Publish water/dust/carbon evidence pack for launch governance.",
+      "kpis": [
+        [
+          "Carbon",
+          86,
+          "%"
+        ],
+        [
+          "Water",
+          79,
+          "%"
+        ],
+        [
+          "Dust",
+          83,
+          "%"
+        ]
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "MES-EVT-0708",
+      "time": "07:08:20",
+      "area": "North pit / haul route",
+      "type": "Haul-route congestion signal",
+      "severity": "Medium",
+      "confidence": 88,
+      "status": "Watching",
+      "summary": "Video twin indicates two haul units converging near stockpile entry; queue risk rises before shift handoff."
+    },
+    {
+      "id": "MES-EVT-0816",
+      "time": "08:16:45",
+      "area": "Beneficiation line B",
+      "type": "P80 / silica drift risk",
+      "severity": "High",
+      "confidence": 92,
+      "status": "Active",
+      "summary": "Synthetic process signals show grind size and silica drift that may raise pellet off-spec risk within two hours."
+    },
+    {
+      "id": "MES-EVT-0910",
+      "time": "09:10:14",
+      "area": "Commissioning subsystem 3C",
+      "type": "Mechanical completion gap",
+      "severity": "High",
+      "confidence": 94,
+      "status": "Action required",
+      "summary": "A-punch completion, critical spares and training evidence are not yet aligned for the subsystem release gate."
+    }
+  ],
+  "riskTrend": [
+    {
+      "time": "07:00",
+      "riskScore": 32.8,
+      "silicaPct": 3.46,
+      "p80Micron": 43.5,
+      "moisturePct": 8.74
+    },
+    {
+      "time": "07:15",
+      "riskScore": 35.9,
+      "silicaPct": 3.46,
+      "p80Micron": 48.7,
+      "moisturePct": 8.63
+    },
+    {
+      "time": "07:30",
+      "riskScore": 44.4,
+      "silicaPct": 3.57,
+      "p80Micron": 48.1,
+      "moisturePct": 8.65
+    },
+    {
+      "time": "07:45",
+      "riskScore": 44.3,
+      "silicaPct": 3.69,
+      "p80Micron": 48.2,
+      "moisturePct": 8.54
+    },
+    {
+      "time": "08:00",
+      "riskScore": 45.9,
+      "silicaPct": 3.68,
+      "p80Micron": 50.8,
+      "moisturePct": 8.59
+    },
+    {
+      "time": "08:15",
+      "riskScore": 50.8,
+      "silicaPct": 3.69,
+      "p80Micron": 51.4,
+      "moisturePct": 8.51
+    },
+    {
+      "time": "08:30",
+      "riskScore": 49.5,
+      "silicaPct": 3.77,
+      "p80Micron": 52.7,
+      "moisturePct": 8.34
+    },
+    {
+      "time": "08:45",
+      "riskScore": 52.0,
+      "silicaPct": 3.76,
+      "p80Micron": 53.9,
+      "moisturePct": 8.23
+    },
+    {
+      "time": "09:00",
+      "riskScore": 56.0,
+      "silicaPct": 3.71,
+      "p80Micron": 53.0,
+      "moisturePct": 8.0
+    },
+    {
+      "time": "09:15",
+      "riskScore": 55.2,
+      "silicaPct": 3.65,
+      "p80Micron": 53.5,
+      "moisturePct": 8.08
+    },
+    {
+      "time": "09:30",
+      "riskScore": 50.7,
+      "silicaPct": 3.61,
+      "p80Micron": 56.5,
+      "moisturePct": 7.87
+    },
+    {
+      "time": "09:45",
+      "riskScore": 47.2,
+      "silicaPct": 3.56,
+      "p80Micron": 53.8,
+      "moisturePct": 7.91
+    },
+    {
+      "time": "10:00",
+      "riskScore": 43.5,
+      "silicaPct": 3.46,
+      "p80Micron": 56.2,
+      "moisturePct": 7.92
+    },
+    {
+      "time": "10:15",
+      "riskScore": 48.2,
+      "silicaPct": 3.38,
+      "p80Micron": 54.2,
+      "moisturePct": 7.77
+    },
+    {
+      "time": "10:30",
+      "riskScore": 44.8,
+      "silicaPct": 3.33,
+      "p80Micron": 53.5,
+      "moisturePct": 7.96
+    },
+    {
+      "time": "10:45",
+      "riskScore": 43.9,
+      "silicaPct": 3.31,
+      "p80Micron": 53.3,
+      "moisturePct": 7.89
+    },
+    {
+      "time": "11:00",
+      "riskScore": 39.2,
+      "silicaPct": 3.24,
+      "p80Micron": 52.2,
+      "moisturePct": 8.02
+    },
+    {
+      "time": "11:15",
+      "riskScore": 41.1,
+      "silicaPct": 3.29,
+      "p80Micron": 52.7,
+      "moisturePct": 8.07
+    },
+    {
+      "time": "11:30",
+      "riskScore": 39.8,
+      "silicaPct": 3.21,
+      "p80Micron": 49.3,
+      "moisturePct": 8.34
+    },
+    {
+      "time": "11:45",
+      "riskScore": 36.2,
+      "silicaPct": 3.29,
+      "p80Micron": 45.1,
+      "moisturePct": 8.26
+    },
+    {
+      "time": "12:00",
+      "riskScore": 38.4,
+      "silicaPct": 3.25,
+      "p80Micron": 41.9,
+      "moisturePct": 8.44
+    },
+    {
+      "time": "12:15",
+      "riskScore": 31.9,
+      "silicaPct": 3.29,
+      "p80Micron": 40.6,
+      "moisturePct": 8.53
+    },
+    {
+      "time": "12:30",
+      "riskScore": 33.1,
+      "silicaPct": 3.31,
+      "p80Micron": 37.2,
+      "moisturePct": 8.53
+    },
+    {
+      "time": "12:45",
+      "riskScore": 28.5,
+      "silicaPct": 3.4,
+      "p80Micron": 36.9,
+      "moisturePct": 8.73
+    },
+    {
+      "time": "13:00",
+      "riskScore": 32.0,
+      "silicaPct": 3.48,
+      "p80Micron": 38.5,
+      "moisturePct": 8.63
+    },
+    {
+      "time": "13:15",
+      "riskScore": 29.6,
+      "silicaPct": 3.49,
+      "p80Micron": 35.8,
+      "moisturePct": 8.76
+    },
+    {
+      "time": "13:30",
+      "riskScore": 37.9,
+      "silicaPct": 3.58,
+      "p80Micron": 38.1,
+      "moisturePct": 8.66
+    },
+    {
+      "time": "13:45",
+      "riskScore": 41.8,
+      "silicaPct": 3.63,
+      "p80Micron": 38.2,
+      "moisturePct": 8.66
+    },
+    {
+      "time": "14:00",
+      "riskScore": 46.3,
+      "silicaPct": 3.74,
+      "p80Micron": 39.4,
+      "moisturePct": 8.75
+    },
+    {
+      "time": "14:15",
+      "riskScore": 43.3,
+      "silicaPct": 3.8,
+      "p80Micron": 38.2,
+      "moisturePct": 8.61
+    },
+    {
+      "time": "14:30",
+      "riskScore": 49.7,
+      "silicaPct": 3.75,
+      "p80Micron": 39.6,
+      "moisturePct": 8.57
+    },
+    {
+      "time": "14:45",
+      "riskScore": 48.1,
+      "silicaPct": 3.74,
+      "p80Micron": 41.0,
+      "moisturePct": 8.49
+    },
+    {
+      "time": "15:00",
+      "riskScore": 52.1,
+      "silicaPct": 3.72,
+      "p80Micron": 43.7,
+      "moisturePct": 8.47
+    }
+  ],
+  "riskInsights": [
+    {
+      "title": "Off-spec risk is explainable",
+      "body": "The current risk score is driven by high-silica blend, P80 drift and moisture movement rather than a black-box quality alert."
+    },
+    {
+      "title": "Simulation-first approach works before history matures",
+      "body": "The agent uses first-principles constraints, test-work assumptions and synthetic ramp-up scenarios until enough operational history exists."
+    },
+    {
+      "title": "Recommended action is approval-gated",
+      "body": "No setpoint is changed automatically. The system prepares recovery, quality and energy trade-offs for a process owner approval."
+    }
+  ],
+  "readinessPack": {
+    "id": "MES-RDY-POV-001",
+    "title": "Subsystem 3C commissioning readiness pack",
+    "area": "Crusher transfer tower / conveyor C-12 / beneficiation feed",
+    "time": "09:18 generated",
+    "gate": "Pre-commissioning release gate",
+    "readiness": "78% complete",
+    "classification": "A-punch risk + SOP/training gap",
+    "evidence": "48 checklist items, 12 OEM extracts, 7 training records, 4 spares exceptions",
+    "status": "Draft until generated",
+    "approval": "Operations readiness owner + maintenance owner + HSE owner"
+  },
+  "timeline": [
+    {
+      "time": "07:30",
+      "label": "Schedule variance detected",
+      "detail": "Primavera/MS Project milestone for subsystem 3C drifts by 3.5 days because inspection, OEM witness and punch closure are misaligned."
+    },
+    {
+      "time": "08:05",
+      "label": "Evidence ingestion completed",
+      "detail": "SOP index, equipment hierarchy, inspection pack, OEM checklist and training roster are normalized into the readiness data spine."
+    },
+    {
+      "time": "08:42",
+      "label": "Readiness gap diagnosed",
+      "detail": "The agent flags critical spares ambiguity and incomplete confined-space permit matrix for pre-commissioning activities."
+    },
+    {
+      "time": "09:18",
+      "label": "Readiness pack generated",
+      "detail": "Word/PDF narrative, Excel punch tracker, schedule delta, RACI and approval summary are created for the daily war-room."
+    }
+  ],
+  "geologyWorkbench": [
+    {
+      "title": "Drillhole QAQC exception register",
+      "body": "19 exceptions clustered around duplicate intervals, failed blanks and missing density values. Agent recommends validation before resource scenario freeze.",
+      "tag": "Excel / CSV output"
+    },
+    {
+      "title": "Model confidence heat map",
+      "body": "Seven low-confidence zones are highlighted near ore-waste boundaries with dilution and cutoff sensitivity warnings.",
+      "tag": "DXF / SVG / GIS output"
+    },
+    {
+      "title": "Resource scenario book",
+      "body": "Monte Carlo scenario compares Fe grade continuity, silica penalty risk and value-at-risk under three drill-spacing options.",
+      "tag": "PPT / PDF output"
+    },
+    {
+      "title": "Drill program optimizer",
+      "body": "Next drill targets ranked by uncertainty reduction, permitting readiness, access practicality and value impact.",
+      "tag": "Approval-ready options"
+    }
+  ],
+  "actions": [
+    {
+      "id": "ACT-001",
+      "title": "Close A-punch items for subsystem 3C",
+      "owner": "Operational Readiness Lead",
+      "due": "48 hours",
+      "priority": "High",
+      "area": "Construction readiness",
+      "value": "Protect first-pellet critical path"
+    },
+    {
+      "id": "ACT-002",
+      "title": "Run P80/moisture/silica setpoint simulation",
+      "owner": "Process Superintendent",
+      "due": "Today",
+      "priority": "High",
+      "area": "Beneficiation + pellet quality",
+      "value": "Reduce off-spec risk before ramp-up"
+    },
+    {
+      "id": "ACT-003",
+      "title": "Validate drillhole QAQC exceptions before model freeze",
+      "owner": "Geology Manager",
+      "due": "3 days",
+      "priority": "Medium",
+      "area": "Geology",
+      "value": "Improve confidence in orebody decisions"
+    },
+    {
+      "id": "ACT-004",
+      "title": "Inspect conveyor C-12 bearing temperature anomaly",
+      "owner": "Maintenance Planner",
+      "due": "Next shift",
+      "priority": "Medium",
+      "area": "Reliability",
+      "value": "Increase failure lead time"
+    },
+    {
+      "id": "ACT-005",
+      "title": "Generate water/dust/carbon evidence pack",
+      "owner": "ESG / Sustainability Lead",
+      "due": "Weekly",
+      "priority": "Medium",
+      "area": "ESG evidence spine",
+      "value": "Prove green-steel traceability"
+    }
+  ],
+  "roadmap": [
+    {
+      "phase": "Weeks 1\u20132",
+      "title": "AI value workshop",
+      "body": "Confirm use cases, KPI baselines, data owners, decision owners and approval logic."
+    },
+    {
+      "phase": "Weeks 3\u20134",
+      "title": "Data discovery",
+      "body": "Map SAP/ERP, FMS, autonomous haulage, SCADA/historian, LIMS, CMMS, GIS, contracts and ESG feeds."
+    },
+    {
+      "phase": "Weeks 5\u20136",
+      "title": "Mission-control prototype",
+      "body": "Build executive cockpit, synthetic data model, video twin, first agent narratives and evidence vault."
+    },
+    {
+      "phase": "Weeks 7\u20138",
+      "title": "Quality + reliability pilots",
+      "body": "Pilot pellet quality, crusher/conveyor reliability and explainable recommendations."
+    },
+    {
+      "phase": "Weeks 9\u201310",
+      "title": "ESG + logistics pilots",
+      "body": "Add carbon, water, dust and shipment-risk evidence workflows."
+    },
+    {
+      "phase": "Weeks 11\u201312",
+      "title": "AI war-room operating model",
+      "body": "Run daily simulation, approvals, handover routines and value tracking for funding decision."
+    }
+  ],
+  "governanceMatrix": [
+    {
+      "agent": "Readiness Control Tower",
+      "decision": "Release / hold commissioning subsystem",
+      "kpi": "Readiness %, A-punch closure, schedule variance",
+      "owner": "Operations readiness lead",
+      "evidence": "Readiness pack, RACI, punch tracker, schedule delta",
+      "approval": "Human approval required"
+    },
+    {
+      "agent": "Process Quality Agent",
+      "decision": "Recommend setpoint window",
+      "kpi": "Fe/SiO\u2082 stability, recovery, off-spec risk",
+      "owner": "Process superintendent",
+      "evidence": "Simulation report, trend chart, trade-off table",
+      "approval": "Process owner approval"
+    },
+    {
+      "agent": "Orebody Intelligence Agent",
+      "decision": "Prioritize drill targets / model confidence work",
+      "kpi": "QAQC pass rate, uncertainty reduction",
+      "owner": "Geology manager",
+      "evidence": "QAQC register, model confidence heat map, resource scenario book",
+      "approval": "Technical committee"
+    },
+    {
+      "agent": "Reliability Agent",
+      "decision": "Prioritize maintenance work orders",
+      "kpi": "Failure lead time, unplanned downtime risk",
+      "owner": "Maintenance planner",
+      "evidence": "Failure narrative, work-order recommendation, parts check",
+      "approval": "Maintenance lead"
+    },
+    {
+      "agent": "ESG Evidence Spine",
+      "decision": "Publish carbon/water/dust evidence pack",
+      "kpi": "Evidence completeness, traceability coverage",
+      "owner": "ESG lead",
+      "evidence": "Board-ready ESG pack and audit trail",
+      "approval": "ESG / compliance review"
+    }
+  ],
+  "knowledgeQuestions": [
+    {
+      "q": "Which agents should Mesabi approve first?",
+      "a": "Start with three low-data agents: Readiness Control Tower, Commissioning Evidence Copilot and Digital SOP/Training Agent. Add two ramp-up pilots in parallel: Process Quality Agent and Reliability Agent. This mirrors the deck logic of proving value before historical operating data matures.",
+      "source": "Mesabi PoV scope"
+    },
+    {
+      "q": "How does this work with limited historical data?",
+      "a": "The demo uses rules, engineering constraints, OEM manuals, SOPs, schedules, commissioning packs, first-principles models and synthetic scenarios first. Live-learning predictive models are introduced after Mesabi builds operating history during commissioning and ramp-up.",
+      "source": "Low-data adoption model"
+    },
+    {
+      "q": "What tangible outputs does the operating brain generate?",
+      "a": "It generates readiness packs, punch lists, QAQC exception registers, process quality reports, simulation summaries, work-order recommendations, ESG evidence packs, board-ready PPT/PDF outputs and exportable JSON/CSV datasets.",
+      "source": "Generated deliverables catalogue"
+    },
+    {
+      "q": "What is the approval value for leadership?",
+      "a": "Leadership gets KPI-owned evidence: days to first pellet, readiness %, off-spec risk, failure lead time, ESG completeness and quantified value pools. Every agent recommendation has a business owner, evidence artifact and approval route.",
+      "source": "Value pool governance"
+    },
+    {
+      "q": "How is this different from replacing SAP or FMS?",
+      "a": "AIonOS is positioned as a governed agent layer that integrates and orchestrates SAP/ERP, FMS, autonomous haulage, SCADA/historian, LIMS, CMMS and GIS. It does not duplicate core systems; it turns their signals into decisions and evidence.",
+      "source": "Architecture principle"
+    },
+    {
+      "q": "What should the 90-day PoV prove?",
+      "a": "The PoV should prove working agent outputs, measurable KPI movement, data integration feasibility, human approval controls and a repeatable war-room model before Mesabi funds enterprise scale.",
+      "source": "90-day roadmap"
+    }
+  ],
+  "evidenceObjects": [
+    {
+      "name": "Operational readiness plan.docx / .pdf",
+      "description": "AI-generated daily readiness narrative covering equipment, process, training, maintenance, spares, HSE and mechanical completion.",
+      "owner": "Readiness Control Tower",
+      "retention": "PoV evidence vault"
+    },
+    {
+      "name": "QAQC exception register.xlsx / .csv",
+      "description": "Drillhole validation table with failed blanks, duplicates, missing density values and owner-assigned corrections.",
+      "owner": "Orebody Intelligence Agent",
+      "retention": "Geology data room"
+    },
+    {
+      "name": "Pellet quality simulation pack.pptx",
+      "description": "Scenario book comparing blend, P80, moisture, silica, Fe grade, strength, recovery and energy trade-offs.",
+      "owner": "Process Quality Agent",
+      "retention": "Process technical review"
+    },
+    {
+      "name": "MC punch tracker.xlsx",
+      "description": "A/B/C punch list with subsystem readiness, due dates, owners, schedule impact and approval notes.",
+      "owner": "Commissioning Evidence Copilot",
+      "retention": "Commissioning handover"
+    },
+    {
+      "name": "GIS / DXF model confidence overlays",
+      "description": "Heat map-style overlays that flag low-confidence orebody zones and drill program options.",
+      "owner": "Geology Agent",
+      "retention": "Technical committee review"
+    },
+    {
+      "name": "ESG evidence spine.json / .pdf",
+      "description": "Carbon, water, dust and shipment-traceability evidence for green-steel launch governance.",
+      "owner": "ESG Evidence Spine",
+      "retention": "Board-ready reporting"
+    }
+  ],
+  "auditTrail": [
+    {
+      "time": "07:08",
+      "actor": "Video Twin Agent",
+      "action": "Detected haul-route queue risk and wrote event MES-EVT-0708.",
+      "hash": "0xMES07A1"
+    },
+    {
+      "time": "08:05",
+      "actor": "Readiness Control Tower",
+      "action": "Normalized commissioning evidence and identified subsystem 3C release risk.",
+      "hash": "0xMES08C2"
+    },
+    {
+      "time": "08:16",
+      "actor": "Process Quality Agent",
+      "action": "Raised off-spec risk due to P80/moisture/silica combination.",
+      "hash": "0xMES08Q7"
+    },
+    {
+      "time": "09:18",
+      "actor": "Supervisor Agent",
+      "action": "Generated readiness pack and routed to human owners.",
+      "hash": "0xMES09R4"
+    }
+  ],
+  "approvalControls": [
+    {
+      "name": "Human approval before execution",
+      "description": "No setpoint, work order, schedule or release gate is executed automatically during PoV.",
+      "owner": "AI governance",
+      "retention": "All agent actions"
+    },
+    {
+      "name": "Explainability note",
+      "description": "Each recommendation stores top drivers, confidence level, value-at-risk and source systems used.",
+      "owner": "Supervisor Agent",
+      "retention": "Audit trail"
+    },
+    {
+      "name": "Data boundary",
+      "description": "Synthetic demo has no Mesabi operational data; production deployment can be on-prem, private cloud or approved cloud.",
+      "owner": "Technology owner",
+      "retention": "Architecture governance"
+    },
+    {
+      "name": "KPI owner mapping",
+      "description": "Each agent has a business owner, technology owner, data steward and approval authority.",
+      "owner": "War-room operating model",
+      "retention": "PoV charter"
+    }
+  ],
+  "impactChart": [
+    {
+      "label": "Readiness pack",
+      "before": 180,
+      "after": 28
+    },
+    {
+      "label": "QAQC review",
+      "before": 240,
+      "after": 62
+    },
+    {
+      "label": "Process report",
+      "before": 120,
+      "after": 18
+    },
+    {
+      "label": "War-room pack",
+      "before": 210,
+      "after": 34
+    }
+  ]
+}
